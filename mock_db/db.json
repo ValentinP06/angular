@@ -1,0 +1,114 @@
+{
+  "orders": [
+    {
+      "tjmHt": 1200,
+      "nbJours": 20,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "formation",
+      "client": "Capgemini2",
+      "comment": "24k",
+      "id": 1
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 10,
+      "tva": 20,
+      "state": "CANCELLED",
+      "typePresta": "formation",
+      "client": "Modis",
+      "comment": "fgddhf",
+      "id": 2
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "CONFIRMED",
+      "typePresta": "formation",
+      "client": "Capgemini",
+      "comment": null,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "typePresta": "formation",
+      "client": "Capgeminis33",
+      "nbJours": 12,
+      "tjmHt": 1200,
+      "tva": 20,
+      "state": "CANCELLED",
+      "comment": "14k"
+    },
+    {
+      "id": 5,
+      "typePresta": "coaching",
+      "client": "Modis",
+      "nbJours": 80,
+      "tjmHt": 1200,
+      "tva": 20,
+      "state": "CONFIRMED",
+      "comment": "Merci Modis pour les 17k"
+    },
+    {
+      "id": 6,
+      "typePresta": "FORMATION modis",
+      "client": "Capgeminis12345",
+      "nbJours": 12,
+      "tjmHt": 1200,
+      "tva": 20,
+      "state": "OPTION",
+      "comment": "formation"
+    }
+  ],
+  "clients": [
+    {
+      "state": "INACTIVE",
+      "tva": 20,
+      "id": 1,
+      "name": "Capgemini",
+      "totalCaHt": 120000,
+      "comment": "un comment pour client modis"
+    },
+    {
+      "state": "ACTIVE",
+      "tva": 20,
+      "totalCaHt": 120000,
+      "id": 2,
+      "name": "Modis",
+      "comment": "un comment pour client modis"
+    },
+    {
+      "state": "INACTIVE",
+      "tva": 20,
+      "totalCaHt": 25000,
+      "id": 5,
+      "name": "Capgeminis",
+      "comment": "Merci Modis pour les 1000k"
+    },
+    {
+      "id": 6,
+      "state": "ACTIVE",
+      "tva": 20,
+      "name": "Capgeminis1234",
+      "totalCaHt": 25000,
+      "comment": "rajout commenrtaire 😍"
+    },
+    {
+      "id": 7,
+      "state": "INACTIVE",
+      "tva": 20,
+      "name": "Capgeminismini",
+      "totalCaHt": 25000,
+      "comment": "c'est super"
+    },
+    {
+      "id": 8,
+      "state": "ACTIVE",
+      "tva": 20,
+      "name": "modis 2.0",
+      "totalCaHt": 25,
+      "comment": "merci pour le crm"
+    }
+  ]
+}

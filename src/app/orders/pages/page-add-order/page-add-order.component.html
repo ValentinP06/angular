@@ -1,0 +1,15 @@
+<app-template-full-width titleEnfant="ajouter une commande">
+
+<app-form-order
+[init]="item"
+(submitted)='onAdd($event)'
+
+></app-form-order>
+
+
+</app-template-full-width>
+
+
+
+<!-- on veut passer un nouvel order a app-form order-->
+<!-- verifier que vous avez un new order dans app form-->

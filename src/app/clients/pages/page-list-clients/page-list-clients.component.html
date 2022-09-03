@@ -1,0 +1,24 @@
+<app-template-full-width [titleEnfant]='titleParent' *ngIf="collection$ | async as collection">
+
+  <app-table-light [headers]='headers'>
+      <tr *ngFor='let i of collection'>
+        <app-icon-edit
+        (click)="goToEdit(i)">
+        </app-icon-edit>
+        
+        <app-icon-delete
+(click)="goToDelete(i)">
+</app-icon-delete>
+        <td>{{i.name | uppercase}}</td>
+        <td>{{i.totalCaHt}} $</td>
+        <td>{{i.comment}}</td>
+        <td appState [etat]="i.state">
+          <select (change)="changeState(i, $event)">
+            <option *ngFor="let state of states" [selected]="state === i.state" [value]="state">{{state}}</option>
+          </select>
+        </td>
+      </tr>
+    </app-table-light>
+
+</app-template-full-width>
+<app-btn route= "add" label="Ajouter" styleBtn="btn btn-warning"></app-btn>

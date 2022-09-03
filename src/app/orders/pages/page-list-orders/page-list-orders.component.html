@@ -1,0 +1,78 @@
+<!--
+  <ul>
+  <li *ngFor='let i of orders'>
+    <div>  {{i.client }}  </div>
+      <div>  {{i.tva }}  </div>
+      <div>  {{i.typePresta }}  </div>
+      <p>   {{ i.nbJours }}  </p>
+
+  </li>
+</ul>
+-->
+
+
+<app-template-full-width [titleEnfant]="titleParent" *ngIf="collection$ | async as collection">
+
+  <!-- ajouter un tableau-->
+
+  <app-table-light
+   [headers]="headers">
+<!--  ici on projete le tableau-->
+
+   <tr *ngFor="let item of collection">
+    <!--  table data cells (td)-->
+    <td>
+      <app-icon-edit
+      (click)="goToEdit(item)">
+      </app-icon-edit>
+
+<!-- ajouter icone delete -->
+<!-- declencher une methode dans le ts -->
+<!-- faire appel au service -->
+<!-- http.delete('url') -->
+<app-icon-delete
+(click)="goToDelete(item)">
+
+
+</app-icon-delete>
+
+
+    </td>
+    <td>{{item.typePresta | uppercase}}</td>
+    <td>{{item.client}}</td>
+    <td>{{item.nbJours}}</td>
+    <td>{{item.tjmHt}}</td>
+    <td>{{item | total}} </td>
+    <td>{{item | total: true}} </td>
+    <!-- untiliser ngclass -->
+    <td appState [etat]='item.state'>
+      <select  (change)="changeState(item, $event)">
+        <!-- iterer dans l'enum-->
+        <option *ngFor="let state of states"
+        [selected]='state===item.state'
+        [value]='state'
+      >{{state}}
+      </option>
+      </select>
+    </td>
+</tr>
+<!-- total(item.nbJours,item.tjmHt,item.tva -->
+
+  </app-table-light>
+    <!-- comment envoyer  post avec input()-->
+    <!-- verifier aussi dans app table light que vous recevez bien collection-->
+
+
+</app-template-full-width>
+
+<!-- creer un composant btn dans shared -->
+<!-- propriete route-->
+<!-- propriete label-->
+<app-btn
+styleBtn='btn btn-warning'
+route="add"
+label="ajouter"
+></app-btn>
+
+
+

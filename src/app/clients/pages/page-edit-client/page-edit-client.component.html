@@ -1,0 +1,9 @@
+<app-template-full-width>
+  <app-form-client
+  [init]="item"
+  (submitted)='onEdit($event)'
+  *ngIf="item$ | async as item"
+  >
+  </app-form-client>
+
+</app-template-full-width>

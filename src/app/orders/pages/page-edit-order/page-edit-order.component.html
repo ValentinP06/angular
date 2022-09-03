@@ -1,0 +1,15 @@
+<app-template-full-width>
+
+  <app-form-order
+  [init]="item"
+  (submitted)='onEdit($event)'
+  *ngIf="item$ | async as item"
+  >
+  </app-form-order>
+
+</app-template-full-width>
+
+<!-- utiliser app template-->
+<!-- utiliser app form-->
+<!--mettre en place dans page edit une methode declechee depuis app app form-->
+<!-- verifier-->
